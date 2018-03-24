@@ -1,0 +1,105 @@
+\input{../header.tex}
+\begin{document}
+      \section*{Lineare Funktionen / Geraden - Lösung}
+      Aufgaben: Bestimme die
+      \begin{enumerate}
+            \item Y-Achsenschnittpunkte,
+            \item X-Achsenschnittpunkte,
+            \item Schnittpunkte der Geraden untereinander.
+      \end{enumerate}
+      Fertige eine Zeichnung mit allen errechneten Punkten an.\\
+      Extra: Berechne die Fläche zwischen Koordinatenachsen und der jeweiligen Geraden.
+      \\
+      $f(x)=-5x+1 \;\;\;\; g(x)=-\frac{3}{5}x+3 \;\;\;\; h(x)=2x-2$
+
+      \begin{figure}
+            \centering
+            \includegraphics{build/plot.pdf}
+            \caption{Zeichnung der Geraden mit allen errechneten Punkten.}
+      \end{figure}
+
+      \newpage
+      \section*{f(x)}
+      Y-Achsenschnittpunkt: $S_y (0\,|\,1)$
+      \begin{equation}
+            f(0)=-5\cdot 0+1=1
+      \end{equation}
+      X-Achsenschnittpunkt: $S_x (0.2\,|\,0)$
+      \begin{align}
+            0&=-5x+1\;\;\;\;|\!+\!5x\\
+            5x&=1\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;|\!:\!5\\
+            x&=\frac{1}{5}=0.2
+      \end{align}
+      Flächeninhalt:
+      \begin{equation}
+            \symup{A}_\text{f} = \frac{1}{2}\cdot1\cdot\frac{1}{5}=\frac{1}{10}=0.1
+      \end{equation}
+
+      \section*{g(x)}
+      Y-Achsenschnittpunkt: $S_y (0\,|\,3)$
+      \begin{equation}
+            g(0)=-\frac{3}{5}\cdot 0+3=3
+      \end{equation}
+      X-Achsenschnittpunkt: $S_x (5\,|\,0)$
+      \begin{align}
+            0&=-\frac{3}{5}x+3\;\;\;\;|\!+\!\frac{3}{5}x\\
+            \frac{3}{5}x&=3\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;|\!\cdot\!\frac{5}{3}\\
+            x&=5
+      \end{align}
+      Flächeninhalt:
+      \begin{equation}
+            \symup{A}_\text{g} = \frac{1}{2}\cdot3\cdot5=\frac{15}{2}=7.5
+      \end{equation}
+
+      \section*{h(x)}
+      Y-Achsenschnittpunkt: $S_y (0\,|-2)$
+      \begin{equation}
+            h(0)=2\cdot 0-2=-2
+      \end{equation}
+      X-Achsenschnittpunkt: $S_x (1\,|\,0)$
+      \begin{align}
+            0&=2x-2\;\;\;\;|\!+\!2\\
+            2&=2x\;\;\;\;\;\;\;\;\;\;|\!:\!2\\
+            x&=1
+      \end{align}
+      Flächeninhalt:
+      \begin{equation}
+            \symup{A}_\text{f} = \frac{1}{2}\cdot1\cdot2=1 
+      \end{equation}
+
+      \section*{Schnittpunkte}
+      f und g:
+      \begin{align}
+            -5x+1&=-\frac{3}{5}x+3\;\;\;|\!+\!\frac{3}{5}x\\
+            -\frac{22}{5}x+1&=3\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;|\!-\!1\\
+            -\frac{22}{5}x&=2\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;|\!\cdot\!(-1)\\
+            \frac{22}{5}x&=-2\;\;\;\;\;\;\;\;\;\;\;\;\:|\!\cdot\!\frac{5}{22}\\
+            x&=-\frac{5}{11}
+      \end{align}
+      \begin{equation}
+            f\left(-\frac{5}{11}\right)=-5\cdot\left(-\frac{5}{11}\right)+1=\frac{25}{11}+1=\frac{36}{11}
+      \end{equation}
+      $\symup{S}_\text{f,g}\left(-\frac{5}{11}\,\middle|\,\frac{36}{11}\right)$\\\\
+      f und h:
+      \begin{align}
+            -5x+1&=2x-2\;\;\;|\!+\!5x\\
+            1&=7x-2\;\;\;|\!+\!2\\
+            3&=7x\;\;\;\;\;\;\;\;\;|\!:\!7\\
+            \frac{3}{7}&=x
+      \end{align}
+      \begin{equation}
+            f\left(\frac{3}{7}\right)=-5\cdot\frac{3}{7}+1=-\frac{15}{7}+1=-\frac{8}{7}
+      \end{equation}
+      $\symup{S}_\text{f,h}\left(\frac{3}{7}\,\middle|\,-\frac{8}{7}\right)$\\\\
+      g und h:
+      \begin{align}
+            -\frac{3}{5}x+3&=2x-2\;\;\;\;\;\;|\!+\!\frac{3}{5}x\\
+            3&=\frac{13}{5}x-2\;\;\;\,|\!+\!2\\
+            5&=\frac{13}{5}x\;\;\;\;\;\;\;\;\;\;|\!\cdot\!\frac{5}{13}\\
+            \frac{25}{13}&=x
+      \end{align}
+      \begin{equation}
+            g\left(\frac{25}{13}\right)=-\frac{3}{5}\cdot\frac{25}{13}+3=-\frac{15}{13}+3=-\frac{2}{13}
+      \end{equation}
+      $\symup{S}_\text{f,g}\left(-\frac{5}{11}\,\middle|\,\frac{36}{11}\right)$
+\end{document}
