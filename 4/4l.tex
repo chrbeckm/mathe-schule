@@ -1,0 +1,46 @@
+\input{../header.tex}
+
+\begin{document}
+
+\section{Stauentwicklung auf der Autobahn - Lösung}
+
+An einer Autobahnbaustelle wird die Stauentwicklung von $08:00$ Uhr bis $12:00$ Uhr durch die Funktion
+\begin{align*}
+    f(t) = t^3-6\cdot t^2+8\cdot t
+\end{align*}
+dargestellt.
+Dabei stellt $f(t)$ die Entwicklung des Staus in $\si{\kilo\meter\per\hour}$ dar und $t$ wird in $\si{\hour}$ angegeben.
+
+\begin{itemize}
+    \item Skizziere den Graphen von $f(t)$.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.7\textwidth]{build/plot.pdf}
+            \caption{Skizze $f(t)$}
+            \label{fig:f(t)}
+        \end{figure}
+    \item Berechne die Nullstellen von $f$ und erkläre die Bedeutung dieser.
+    \item Erkläre die Bedeutung positiver und negativer Funktionswerte von $f$.
+    \item Bestimme rechnerisch die Zeitpunkte, zu denen die Staulänge am schnellsten zu- bzw. abnimmt.
+    \item 
+        \begin{enumerate}
+            \item Begründe, warum die Funktion $F$ mit $F(t) = $, $t \in \left[0,4\right]$, die Staulänge zum Zeitpunkt $t$ beschreibt.
+            \item Berechne die Staulänge für $08:30$.
+            \item Berechne, um wie viel die Staulänge von $08:30$ Uhr bis $09:00$ Uhr zunimmt, und gib für diesen Zeitraum die durchschnittliche Änderungsrate der Staulänge an.
+            \item Bestimme den Zeitpunkt, zu dem die Staulänge ihr Maximum erreicht hat, und berechne die Staulänge.
+        \end{enumerate}
+    \item An einem bestimmten Tag beginnt der Stau schon um $06:00$ Uhr und hat sich bis um $10:00$ Uhr vollständig aufgelöst.
+        \begin{enumerate}
+            \item Begründe, warum es nicht möglich ist, dass die momentane Änderungsrate der Staulänge durch die diffenrenzierbare Funktion $g$ modelliert werden kann.
+                Der Graph dazu ist in \ref{fig:g} dargestellt.
+            \item Ermittel die notwendige Bedingung, die jede differenzierbare Funktion $h$ erfüllen muss, damit diese die momentane Änderungsrate der Staulänge an einem Tag sinnvoll modelli
+        \end{enumerate}
+\end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/plot2.pdf}
+    \caption{Funktion $g$}
+    \label{fig:g}
+\end{figure}
+
+\end{document}
