@@ -13,6 +13,10 @@ all: build/4.pdf build/4l.pdf
 build/plot.pdf: plot.py  ../header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 
+build/plot2.pdf: build/plot.pdf
+
+build/4.pdf: build/plot2.pdf
+	
 build/4.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
@@ -24,7 +28,7 @@ build/4.pdf: FORCE | build
 	  --halt-on-error \
 	4.tex
 
-build/4l.pdf: build/plot.pdf
+build/4l.pdf: build/plot.pdf build/plot2.pdf
 
 build/4l.pdf: FORCE | build
 	  TEXINPUTS=build: \
