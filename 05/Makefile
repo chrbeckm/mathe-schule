@@ -10,12 +10,12 @@ endif
 
 all: build/5.pdf build/5l.pdf
 
-build/koord.pdf: koord.py ../matplotlibrc ../header-matplotlib.tex | build
+build/koordleer.pdf: koord.py ../matplotlibrc ../header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python koord.py
 build/koordpunkte.pdf: build/koordleer.pdf
 build/koordgeraden.pdf: build/koordleer.pdf
 
-build/5.pdf:build/koord.pdf
+build/5.pdf:build/koordleer.pdf
 
 build/5.pdf: FORCE | build
 	  TEXINPUTS=build: \
