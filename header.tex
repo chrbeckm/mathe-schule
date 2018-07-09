@@ -31,6 +31,7 @@
   separate-uncertainty=true,
   per-mode=symbol-or-fraction,
 ]{siunitx}
+\sisetup{math-micro=\text{µ},text-micro=µ}
 \usepackage[
   version=4,
   math-greek=default,
@@ -41,6 +42,23 @@
 \usepackage{float}
 \floatplacement{figure}{htbp}
 \floatplacement{table}{htbp}
+\RequirePackage{luatex85}
+\usepackage[
+  locale=DE,
+]{siunitx}
+\usepackage{tikz}
+\usepackage[
+  europeanresistors,
+  americaninductors,
+  siunitx,
+]{circuitikz}
+\usepackage{stackengine}
+\AtBeginDocument{
+  \sisetup{
+    math-rm=\mathrm,
+    math-micro=µ,
+  }
+}
 \usepackage[
   section,
   below,
@@ -57,6 +75,11 @@
 \usepackage{booktabs}
 \usepackage{microtype}
 \usepackage[
+  backend=biber,
+]{biblatex}
+\addbibresource{lit.bib}
+\addbibresource{programme.bib}
+\usepackage[
   unicode,
   pdfusetitle,
   pdfcreator={},
@@ -64,3 +87,7 @@
 ]{hyperref}
 \usepackage{bookmark}
 \usepackage[shortcuts]{extdash}
+\usepackage{multirow}
+\usepackage{rotating}
+\setlength\parindent{0pt}
+
