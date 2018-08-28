@@ -1,7 +1,17 @@
+ifeq (,$(shell sh -c 'cygpath --version 2> /dev/null'))
+  # Unix
+  pwd := $$(pwd)
+  translate = $1
+else
+  # Windows mit MSys2/Cygwin
+  pwd := $$(cygpath -m "$$(pwd)")
+  translate = $(shell echo '$1' | sed 's/:/;/g')
+endif
+
 all: build/2.pdf build/2l.pdf
 
 build/2.pdf: FORCE | build
-	  TEXINPUTS=build: \
+	  TEXINPUTS="$(call translate,build:)" \
 	  BIBINPUTS=build: \
 	  max_print_line=2048576 \
 	latexmk \
@@ -12,7 +22,7 @@ build/2.pdf: FORCE | build
 	2.tex
 
 build/2l.pdf: FORCE | build
-	  TEXINPUTS=build: \
+	  TEXINPUTS="$(call translate,build:)" \
 	  BIBINPUTS=build: \
 	  max_print_line=2048576 \
 	latexmk \

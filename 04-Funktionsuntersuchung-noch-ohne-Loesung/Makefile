@@ -8,17 +8,18 @@ else
   translate = $(shell echo '$1' | sed 's/:/;/g')
 endif
 
-all: build/5.pdf build/5l.pdf
+all: build/4.pdf \
+	build/4l.pdf
 
-build/koordleer.pdf: koord.py ../matplotlibrc ../header-matplotlib.tex | build
-	TEXINPUTS="$(call translate,$(pwd):)" python koord.py
-build/koordpunkte.pdf: build/koordleer.pdf
-build/koordgeraden.pdf: build/koordleer.pdf
+build/plot.pdf: plot.py  ../header-matplotlib.tex | build
+	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 
-build/5.pdf:build/koordleer.pdf
+build/plot2.pdf: build/plot.pdf
 
-build/5.pdf: FORCE | build
-	  TEXINPUTS=build: \
+build/4.pdf: build/plot2.pdf
+
+build/4.pdf: FORCE | build
+	  TEXINPUTS="$(call translate,build:)" \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
 	latexmk \
@@ -26,13 +27,12 @@ build/5.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	5.tex
+	4.tex
 
-build/5l.pdf: build/koordpunkte.pdf \
-		build/koordgeraden.pdf
+build/4l.pdf: build/plot.pdf build/plot2.pdf
 
-build/5l.pdf: FORCE | build
-	  TEXINPUTS=build: \
+build/4l.pdf: FORCE | build
+	  TEXINPUTS="$(call translate,build:)" \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
 	latexmk \
@@ -40,7 +40,7 @@ build/5l.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	5l.tex
+	4l.tex
 
 build:
 	mkdir -p build

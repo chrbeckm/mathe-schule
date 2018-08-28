@@ -14,7 +14,7 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plot.py
 
 build/3.pdf: FORCE | build
-	  TEXINPUTS=build: \
+	  TEXINPUTS="$(call translate,build:)" \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
 	latexmk \
@@ -27,7 +27,7 @@ build/3.pdf: FORCE | build
 build/3l.pdf: build/plot.pdf
 
 build/3l.pdf: FORCE | build
-	  TEXINPUTS=build: \
+	  TEXINPUTS="$(call translate,build:)" \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
 	latexmk \
