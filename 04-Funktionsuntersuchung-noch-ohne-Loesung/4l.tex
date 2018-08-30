@@ -20,17 +20,94 @@ Dabei stellt $f(t)$ die Entwicklung des Staus in $\si{\kilo\meter\per\hour}$ dar
             \label{fig:f(t)}
         \end{figure}
     \item Berechne die Nullstellen von $f$ und erkläre die Bedeutung dieser.
-    \item Erkläre die Bedeutung positiver und negativer Funktionswerte von $f$.
-    \item Bestimme rechnerisch die Zeitpunkte, zu denen die Staulänge am schnellsten zu- bzw. abnimmt.
-        \begin{enumerate}
+      \begin{align*}
+        &&f(t)=0 && | \text{Faktorisierung}\\
+        \Leftrightarrow && t(t^2-6\cdot t + 8) = 0 \\
+        \Rightarrow && t=0 \;\; \lor \;\; t^2-6\cdot t + 8 = 0 && | \text{pq-Formel}\\
+        \Leftrightarrow && t_{\sfrac{1}{2}}=-\frac{-6}{2} \pm \sqrt{9-8} &&\\
+        \Rightarrow && t=0, \;\; t=2, \;\; t=4.&&
+      \end{align*}
+      An den Nullstellen nimmt die Staulänge weder zu noch ab. Hier ist die Veränderung der Länge Null.\\
+    \item Erkläre die Bedeutung positiver und negativer Funktionswerte von $f$.\\\\
+      Während bei den Nullstellen die Staulänge unverändert bleibt, nimmt sie bei positiven Funktionswerten zu, und bei negativen Funktionswerten ab.\\
+      Hierbei ist der Betrag des Funktionswerts die Geschwindigkeit, mit der sich die Staulänge verändert.\\
+    \item Bestimme rechnerisch die Zeitpunkte, zu denen die Staulänge am schnellsten zu- bzw. abnimmt.\\\\
+      Gesuchte Punkte: Hoch-/Tiefpunkte\\
+      \begin{align*}
+        \text{H.B.:} \;\; f'(t)=0&\\
+        \text{N.B.:} \;\; f''(t)=0.&\\
+        \Rightarrow & \;\; f'(t)=3\cdot t^2 - 12\cdot t + 8=0 \\
+        \Leftrightarrow & \;\; 3\cdot t^2 - 12\cdot t + 8 = 0 &&|:3\; |\text{pq-Formel}\\
+        \Leftrightarrow & \;\; t_{\sfrac{1}{2}}= -\frac{-4}{2} \pm \sqrt{4-\frac{8}{3}} = 2 \pm \frac{2}{\sqrt{3}}&&\\
+        \Rightarrow &\;\; t=2-\frac{2}{\sqrt{3}} ,\;\; t=2+\frac{2}{\sqrt{3}}&&\\
+        f''(t) = 6\cdot t - 12 &&\\
+        \Rightarrow & \;\; f''\left(2-\frac{2}{\sqrt{3}}\right)=6\cdot\left(2-\frac{2}{\sqrt{3}}\right)-12 &&\\
+        &= 12-\frac{12}{\sqrt{3}}-12 = -\frac{12}{\sqrt{3}} \;\; < 0 &&\\
+        \Rightarrow & \;\; \text{Es handelt sich um einen Hochpunkt bei} \; t=2-\frac{2}{\sqrt{3}}&&\\
+        \text{Bzw.} & &&\\
+        & f''\left(2+\frac{2}{\sqrt{3}}\right)=6\cdot\left(2+\frac{2}{\sqrt{3}}\right)-12 &&\\
+        &= 12+\frac{12}{\sqrt{3}}-12 = +\frac{12}{\sqrt{3}} \;\; > 0 &&\\
+        \Rightarrow & \;\; \text{Es handelt sich um einen Tiefpunkt bei} \; t=2+\frac{2}{\sqrt{3}}.
+      \end{align*}
+      \begin{enumerate}
              \item Begründe, warum die Funktion $F$ mit
-             \begin{equation}
+             \begin{equation*}
                    F(t) = t^2\cdot\left(\frac{t^2}{4}-2t+4\right), \;\;\; t \in \left[0,4\right],
-             \end{equation}
-             die Staulänge zum Zeitpunkt $t$ beschreibt.
-             \item Berechne die Staulänge für 08$:$30 Uhr.
-             \item Berechne, um wie viel die Staulänge von 08$:$30 Uhr bis 09$:$00 Uhr zunimmt, und gib für diesen Zeitraum die durchschnittliche Änderungsrate der Staulänge an.
-             \item Bestimme den Zeitpunkt, zu dem die Staulänge ihr Maximum erreicht hat, und berechne die Staulänge.
+             \end{equation*}
+             die Staulänge zum Zeitpunkt $t$ beschreibt.\\\\
+             Hier gibt es zwei verschiedene Wege:\\
+             Entweder die gegebene Funktion $F(t)$ ableiten:\\
+             \begin{align*}
+               &&\left(F(t)\right)' &= \left(t^2\cdot\left(\frac{t^2}{4}-2t+4\right)\right)' \\
+               \Leftrightarrow && f(t) &= \left(\frac{t^4}{4} - 2\cdot t^3 + 4\cdot t^2\right)'\\
+               && &= \frac{4}{4}\cdot t^3 - 2\cdot 3\cdot t^2 + 4\cdot2\cdot t\\
+               && &= t^3 - 6\cdot t^2 +8\cdot t.
+               \intertext{oder die Funktion $f(t)$ unbestimmt integrieren:}
+               &&\int_{}^{}{f(t)\;\symup{d}t} &= \int{t^3-6\cdot t^2+8\cdot t\;\symup{d}t}\\
+               \Leftrightarrow && F(t) &= \frac{1}{4}t^4 - \frac{6}{3}t^3+\frac{8}{2}t^2\\
+               && &= t^2\left(\frac{t^2}{4} - 2\cdot t + 4\right). &&\text{q.e.d.}
+             \end{align*}
+             \item Berechne die Staulänge für 08$:$30 Uhr.\\\\
+               Die Staulänge an einem Zeitpunkt wird durch den Funktionswert der Funktion $F(t)$ beschrieben. Daher wird der Wert $F(0,5)$ berechnet:\\
+               \begin{align*}
+                 &&\text{08$:$00} &\cong 0\\
+                 &&\text{12$:$00} &\cong 4\\
+                 \Rightarrow && \text{08$:$30} &\cong 0,5.\\
+                 \intertext{Damit kann die Staulänge bestimmt werden:}
+                 && F(0,5) &= (0,5)^2\cdot \left(\frac{(0,5)^2}{4} - 2\cdot 0,5 + 4\right)\\
+                 && &= \frac{1}{4}\left(\frac{1}{16}-1+4\right)\\
+                 && &= \frac{49}{64}.
+               \end{align*}
+             \item Berechne, um wie viel die Staulänge von 08$:$30 Uhr bis 09$:$00 Uhr zunimmt, und gib für diesen Zeitraum die durchschnittliche Änderungsrate der Staulänge an.\\\\
+               Eine Zunahme der Staulänge wird durch die Differenz zweier Funktionswerte bei den jeweiligen Zeitpunkten beschrieben.
+               Man kann sich das vorstellen, wie das Integrieren von einem Zeitpunkt bis zum nächsten.
+               Dieser Lösungsweg kann auch gewählt werden.
+               Allerdings wird dieser hier nicht weiter ausgeführt, da die Integration oben bereits behandelt wurde.\\
+               \begin{align*}
+                 &&F(1)-F(0,5) &= 1\cdot \left(\frac{1}{4}-2+4\right)-\frac{49}{64}\\
+                 && &= \frac{9}{4}-\frac{49}{64}\\
+                 && &= \frac{144-49}{64} = \frac{95}{64}.
+                 \intertext{Die Durchschnittliche Änderungsrate kann entweder mit der Formel für den Durchschnitt mit der Integration nach}
+                 && \bar{m} &= \frac{1}{b-a}\int_{a}^{b}{f(t)\;\symup{d}t}
+                 \intertext{berechnet werden, oder mit dem Ergebnis von oben und der Zeitdifferenz linear berechnet werden:}
+                 &&\bar{m} &= \frac{95}{64}\cdot \frac{1}{2}\\
+                 && &= \frac{95}{128}.
+               \end{align*}
+               Der Faktor $\sfrac{1}{2}$ stammt dabei aus der Zeitdifferenz von einer halben Stunde.
+             \item Bestimme den Zeitpunkt, zu dem die Staulänge ihr Maximum erreicht hat, und berechne die Staulänge.\\\\
+               Hier kann die Aufgabenstellung mit zwei Varianten gelöst werden.\\
+               Entweder man berechnet das Maximum der Funktion $F(t)$,
+               oder man überlegt sich aus dem Verlauf der Funktion $f(t)$,
+               dass ab dem Zeitpunkt 10$:$00 Uhr die Staulänge wegen den Eigenschaften von $f(t)$ wieder abnimmt.
+               Dann kommt man auf:\\
+               \begin{align*}
+                 && \left(F(t)\right)' &= f(t).\\
+                 \Rightarrow && \text{Die Extrema entprechen der Nullstellen von $f(t)$.}\\
+                 \Leftrightarrow && t=0,\;t=2,\;t=4.\\
+                 \intertext{Da die Ableitung von $f(t)$, also $f'(t)$ nun entscheidet, ob es sich um ein Maximum oder Minimum handelt, müssen diese Eigenschaften für die Extremstellen überprüft werden.}
+                 && f'(0) &= 3\cdot 0^2 - 12\cdot 0 +8 = 8\;>0\\
+                 \Rightarrow && \text{Es handelt sich um einen Tiefpunkt.}\\
+                 && f'(2) &=
          \end{enumerate}
      \item An einem bestimmten Tag beginnt der Stau schon um 06$:$00 Uhr und hat sich bis um 10$:$00 Uhr vollständig aufgelöst.
          \begin{enumerate}
