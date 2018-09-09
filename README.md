@@ -1,7 +1,10 @@
 # mathe-schule
-Matheblätter zum Üben verschiedener Bereiche, mit Lösungen.
+Matheblätter zum üben verschiedener Bereiche, mit Lösungen.
 Bei Verwendung bitte eine Nachricht schreiben, ebenso bei Fehlern.
 
-make, LaTeX, Python benutzt
+Verwendete Programme:
+- `make`
+- `LaTeX`
+- `Python`
 
-Benutze Installationen von: https://toolbox.pep-dortmund.org/install/index.html
+Installation nach: https://toolbox.pep-dortmund.org/install/index.html
