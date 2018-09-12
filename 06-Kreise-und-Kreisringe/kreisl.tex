@@ -1,0 +1,71 @@
+\input{../header.tex}
+
+\begin{document}
+    \section*{Kreise und Kreisringe}
+
+    \subsection*{Formeln}
+    \begin{table}
+        \caption{Vervollständige die Tabelle. Verwende die allgemeinen Formeln}
+        \label{tab:allgFormeln}
+        \begin{tabular}{c | c c | c}
+            \toprule
+            & \multicolumn{2}{c}{Kreise}
+            & {Kreisringe} \\
+            & {Radius $r$}
+            & {Durchmesser $d$}
+            & {Innenradius $r_i$ \& Außenradius $r_a$}\\
+            \midrule
+            Fläche $A$ & $π \cdot r^2$ & $π \cdot \frac{d^2}{4}$ & $π \cdot (r_a^2 - r_i^2)$     \\
+            & & & \\
+            & & & \\
+            Umfang $U$ & $2 \cdot π r$ & $π \cdot d$             & $2 \cdot π \cdot (r_a + r_i)$ \\
+            & & & \\
+            & & & \\
+            \bottomrule
+        \end{tabular}
+    \end{table}
+
+    \subsection*{Kreise}
+    Gebe jeweils den Umfang und den Flächeninhalt des Kreises an.
+
+    Für eine hilfsmittelfreie Lösung kann $π = \sfrac{22}{7}$ verwendet werden.
+    \begin{align}
+        r &= 5 &U = 10π &\approx \frac{220}{7} \approx 31,4 &A = 25π \approx \frac{550}{7} \approx 78,6 \\
+        d &= 8 &U =  8π &\approx \frac{176}{7} \approx 25,1 &A = 16π \approx \frac{352}{7} \approx 50,3
+    \end{align}
+    ~\\
+    Wie viele $\SI{0.8}{\meter}$ große Schritte muss man gehen um die Erde am Äquator zu umlaufen? \\
+    Wie ist der Flächeninhalt der so umgangenen Erdscheibe? \\
+    $d_\text{Erde} = \SI{6378137}{\meter}$
+    \begin{align}
+        U &= \frac{140319014}{7} \si{\meter} = \SI{20045573.4}{\meter} \\
+        \# \text{Schritte} &=  \frac{\SI{20045573.4}{\meter}}{\SI{0.8}{\meter}} = \num{25056966.7} \\
+        A &= \frac{22}{7} \cdot \frac{\SI{40680631590769}{\meter\squared}}{4} = \SI{31963353392747.1}{\meter\squared}
+    \end{align}
+    ~\\
+    Mit eine der größten Uhren der Welt befindet sich in Mekka mit einer
+    Zifferblattfläche von $\SI{43}{\meter\squared}$. Reicht dies für einen
+    $\SI{3.5}{\meter}$ langen Zeiger? Wie groß müsste das Ziffernblatt sein,
+    wenn der Abstand zwischen Zeigerende und Ziffernblattrand $\SI{1}{\meter}$ betragen soll.
+    \begin{align}
+        A_{\SI{3.5}{\meter}} &= \frac{22}{7} \cdot \left(\frac{7}{2} \si{\meter}\right)^2 = \frac{77}{2}\si{\meter} \approx \SI{38.5}{\meter} \\
+        A_{\SI{4.5}{\meter}} &= \frac{22}{7} \cdot \left(\frac{9}{2} \si{\meter}\right)^2 = \frac{891}{14}\si{\meter} \approx \SI{63.6}{\meter}
+    \end{align}
+
+    \subsection*{Kreisringe}
+    Die International Space Station befindet sich $\SI{370}{\kilo\meter}$ über der Erde,
+    wie groß ist die Fläche die bei einer Umrundung zwischen Erde und ISS entsteht?
+    $r_\text{Erde} \approx \SI{3189}{\kilo\meter}$
+    \begin{align}
+        A &= \frac{22}{7} \cdot \left( \left(\SI{3189}{\kilo\meter} + \SI{370}{\kilo\meter}\right)^2 - \left(\SI{3189}{\kilo\meter}\right)^2\right) \\
+          &= \SI{7846960}{\kilo\meter\squared}
+    \end{align}
+    ~\\
+    Ein Kreisel mit 3 Fahrspuren wird geplant. Jede Fahrspur soll $\SI{5}{\meter}$ breit sein.
+    Wie viel Asphalt wird gebraucht, wenn der Kreisel einen Außenradius von $\SI{145}{\meter}$ haben soll?
+    \begin{align}
+        A &= \frac{22}{7} \cdot \left( \left(\SI{145}{\meter}\right)^2 - \left(\SI{145}{\meter} - 3\cdot\SI{5}{\meter}\right)^2\right) \\
+          &= \SI{12964.3}{\meter\squared}
+    \end{align}
+
+    \end{document}
