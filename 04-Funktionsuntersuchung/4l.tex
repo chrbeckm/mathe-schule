@@ -105,16 +105,27 @@ Dabei stellt $f(t)$ die Entwicklung des Staus in $\si{\kilo\meter\per\hour}$ dar
                  \Rightarrow && \text{Die Extrema entprechen der Nullstellen von $f(t)$.}\\
                  \Leftrightarrow && t=0,\;t=2,\;t=4.\\
                  \intertext{Da die Ableitung von $f(t)$, also $f'(t)$ nun entscheidet, ob es sich um ein Maximum oder Minimum handelt, müssen diese Eigenschaften für die Extremstellen überprüft werden.}
-                 && f'(0) &= 3\cdot 0^2 - 12\cdot 0 +8 = 8\;>0\\
-                 \Rightarrow && \text{Es handelt sich um einen Tiefpunkt.}\\
-                 && f'(2) &=
-             \end{align*}
-         \end{enumerate}
+                 f'(0) &= 3\cdot 0^2 - 12\cdot 0 +8 = 8\;>0\\
+                 \Rightarrow &\text{Es handelt sich um einen Tiefpunkt.}\\
+                 f'(2) &= 3\cdot 2^2 - 12\cdot 2 +8 = -4\;<0\\
+                 \Rightarrow &\text{Es handelt sich um einen Hochpunkt.}\\
+                 f'(4) &= 3\cdot 4^2 - 12\cdot 4 +8 = 8\;<0\\
+                 \Rightarrow &\text{Es handelt sich um einen Tiefpunkt.}\\
+               \end{align*}
+           \end{enumerate}
      \item An einem bestimmten Tag beginnt der Stau schon um 06$:$00 Uhr und hat sich bis um 10$:$00 Uhr vollständig aufgelöst.
          \begin{enumerate}
              \item Begründe, warum es nicht möglich ist, dass die momentane Änderungsrate der Staulänge durch die diffenrenzierbare Funktion $g$ modelliert werden kann.
-                 Der Graph dazu ist in \ref{fig:g} dargestellt.
-            \item Ermittel die notwendige Bedingung, die jede differenzierbare Funktion $h$ erfüllen muss, damit diese die momentane Änderungsrate der Staulänge an einem Tag sinnvoll modellieren kann.
+                 Der Graph dazu ist in \ref{fig:g} dargestellt. \\\\
+              Begründung: Abnahme ist nicht gleich der Zunahme des Staus.\\
+              Ergo löst sich der Stau nicht auf.\\
+              Beweis ohne Rechnung. Fläche unter dem Graphen auf beiden Seiten der x-Achse sind nicht gleich.
+            \item Ermittel die notwendige Bedingung, die jede differenzierbare Funktion $h$ erfüllen muss, damit diese die momentane Änderungsrate der Staulänge an einem Tag sinnvoll modellieren kann.\\\\
+              In Worten: Das Integral der Funktion über das relevante Intervall ist Null.\\
+              Als Gleichung:
+              \begin{align*}
+                \int^{a}_{b}{g(t)\symup{d}t} = 0.
+              \end{align*}
         \end{enumerate}
 \end{itemize}
 \begin{figure}
