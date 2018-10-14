@@ -17,7 +17,7 @@ build/1.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	1.tex
 
@@ -28,7 +28,7 @@ build/1l.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	1l.tex
 

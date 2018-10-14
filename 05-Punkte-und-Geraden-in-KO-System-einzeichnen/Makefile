@@ -24,7 +24,7 @@ build/5.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	5.tex
 
@@ -38,7 +38,7 @@ build/5l.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	5l.tex
 

@@ -20,7 +20,7 @@ build/3.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	3.tex
 
@@ -33,7 +33,7 @@ build/3l.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	3l.tex
 

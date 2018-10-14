@@ -20,7 +20,7 @@ build/kreis.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	kreis.tex
 
@@ -31,7 +31,7 @@ build/kreisl.pdf: FORCE | build
 	latexmk \
 	  --lualatex \
 	  --output-directory=build \
-	  --interaction=nonstopmode \
+	  --interaction=batchmode \
 	  --halt-on-error \
 	kreisl.tex
 
